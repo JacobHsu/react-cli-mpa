@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npx create-react-app react-cli-mpa`
 
+`yarn eject`
+
 ## Available Scripts
 
 In the project directory, you can run:
