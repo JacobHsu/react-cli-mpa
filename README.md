@@ -4,6 +4,60 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `yarn eject`
 
+## References
+
+[react MPA 多页配置](https://juejin.im/post/5da931d2f265da5b6f074ae2)
+
+webpack.config.js
+
+```js
+// 修改 webpack entry
+entry: {
+      index:[
+        isEnvDevelopment && require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appIndexJs,
+      ].filter(Boolean)
+    },
+
+// 修改 webpack output
+output: {
+    filename: isEnvProduction
+        ? 'static/js/[name].[contenthash:8].js'
+        : isEnvDevelopment && 'static/js/[name].js',
+}
+
+// 修改 HtmlWebpackPlugin
+{
+  inject: true,
+  template: paths.appHtml,
+  // 新增
+  filename: 'index.html',
+  chunks: ['index'],
+}
+// 關閉 entrypointFiles
+
+  new ManifestPlugin({
+    fileName: 'asset-manifest.json',
+    publicPath: publicPath,
+    generate: (seed, files, entrypoints) => {
+        const manifestFiles = files.reduce((manifest, file) => {
+        manifest[file.name] = file.path;
+        return manifest;
+        }, seed);
+        /*
+        const entrypointFiles = entrypoints.main.filter(
+        fileName => !fileName.endsWith('.map')
+        );
+        */
+        return {
+        files: manifestFiles,
+        //entrypoints: entrypointFiles,
+        };
+    },
+    }),
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
