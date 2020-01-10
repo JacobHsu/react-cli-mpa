@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## References
 
 [react MPA 多页配置](https://juejin.im/post/5da931d2f265da5b6f074ae2)
+[create-react-app多页面配置](https://www.codercto.com/a/88661.html)
 
 webpack.config.js
 
@@ -56,6 +57,29 @@ output: {
     },
     }),
 ```
+
+测试页面 
+http://localhost:3000/index.html 
+http://localhost:3000/index2.html
+
+
+## Deploy
+
+`yarn add gh-pages -D`
+
+package.json
+
+```js
+"homepage": "https://jacobhsu.github.io/react-cli-mpa"
+
+"scripts": {
+  //...
+  "predeploy": "yarn build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+`yarn deploy`
 
 
 ## Available Scripts

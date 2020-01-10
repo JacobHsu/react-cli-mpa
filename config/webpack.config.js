@@ -165,6 +165,11 @@ module.exports = function(webpackEnv) {
         // We include the app code last so that if there is a runtime error during
         // initialization, it doesn't blow up the WebpackDevServer client, and
         // changing JS code would still trigger a refresh.
+      ].filter(Boolean),
+      index2:[
+        isEnvDevelopment &&
+        require.resolve('react-dev-utils/webpackHotDevClient'),
+        paths.appIndexJs2,
       ].filter(Boolean)
     },
     output: {
@@ -522,6 +527,34 @@ module.exports = function(webpackEnv) {
             template: paths.appHtml,
             filename: 'index.html',
             chunks: ['index'],
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+       // Generates an `index2.html` file with the <script> injected.         
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {
+            inject: true,
+            template: paths.appHtml,
+            filename: 'index2.html',
+            chunks: ['index2'],
           },
           isEnvProduction
             ? {
