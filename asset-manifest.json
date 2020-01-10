@@ -1,0 +1,22 @@
+{
+  "files": {
+    "static/js/0.2dc906e4.chunk.js": "/react-cli-mpa/static/js/0.2dc906e4.chunk.js",
+    "static/js/0.2dc906e4.chunk.js.map": "/react-cli-mpa/static/js/0.2dc906e4.chunk.js.map",
+    "index.css": "/react-cli-mpa/static/css/index.d1b05096.chunk.css",
+    "index.js": "/react-cli-mpa/static/js/index.94acc3f2.chunk.js",
+    "index.js.map": "/react-cli-mpa/static/js/index.94acc3f2.chunk.js.map",
+    "index2.js": "/react-cli-mpa/static/js/index2.45d19216.chunk.js",
+    "index2.js.map": "/react-cli-mpa/static/js/index2.45d19216.chunk.js.map",
+    "runtime-index.js": "/react-cli-mpa/static/js/runtime-index.57fe2465.js",
+    "runtime-index.js.map": "/react-cli-mpa/static/js/runtime-index.57fe2465.js.map",
+    "runtime-index2.js": "/react-cli-mpa/static/js/runtime-index2.4314a53d.js",
+    "runtime-index2.js.map": "/react-cli-mpa/static/js/runtime-index2.4314a53d.js.map",
+    "index.html": "/react-cli-mpa/index.html",
+    "index2.html": "/react-cli-mpa/index2.html",
+    "precache-manifest.f14a5b0dcf3db40be6f1797c06bee6ad.js": "/react-cli-mpa/precache-manifest.f14a5b0dcf3db40be6f1797c06bee6ad.js",
+    "service-worker.js": "/react-cli-mpa/service-worker.js",
+    "static/css/index.d1b05096.chunk.css.map": "/react-cli-mpa/static/css/index.d1b05096.chunk.css.map",
+    "static/js/0.2dc906e4.chunk.js.LICENSE": "/react-cli-mpa/static/js/0.2dc906e4.chunk.js.LICENSE",
+    "static/media/logo.svg": "/react-cli-mpa/static/media/logo.5d5d9eef.svg"
+  }
+}
